@@ -48,25 +48,19 @@ public class Painel extends JDialog {
         jPanel.add(stopButton,gridBagConstraints);
         stopButton.setEnabled(false);
 
-        startButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                threadTime = new Thread(new Cronometro(jTextField));
-                threadTime.start();
-                stopButton.setEnabled(true);
-                startButton.setEnabled(false);
+        startButton.addActionListener(e -> {
+            threadTime = new Thread(new Cronometro(jTextField));
+            threadTime.start();
+            stopButton.setEnabled(true);
+            startButton.setEnabled(false);
 
 
-            }
         });
 
-        stopButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                threadTime.stop();
-                startButton.setEnabled(true);
-                stopButton.setEnabled(false);
-            }
+        stopButton.addActionListener(e -> {
+            threadTime.stop();
+            startButton.setEnabled(true);
+            stopButton.setEnabled(false);
         });
 
         add(jPanel, BorderLayout.WEST);
