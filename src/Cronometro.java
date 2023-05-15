@@ -14,7 +14,6 @@ private JTextField jTextField;
         public void run() {
 
             while(true){
-
                 jTextField.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").
                         format(Calendar.getInstance().getTime()));
 
@@ -24,7 +23,6 @@ private JTextField jTextField;
                     throw new RuntimeException(e);
                 }
             }
-
         }
     }
 

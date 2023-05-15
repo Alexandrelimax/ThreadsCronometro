@@ -12,7 +12,6 @@ public class Painel extends JDialog {
     private JButton stopButton = new JButton("Stop");
     private Thread threadTime;
 
-
     public Painel() {
 
         setTitle("Cronometro");
@@ -53,7 +52,6 @@ public class Painel extends JDialog {
             threadTime.start();
             stopButton.setEnabled(true);
             startButton.setEnabled(false);
-
 
         });
 
