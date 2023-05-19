@@ -26,3 +26,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Outros ###
+out/
